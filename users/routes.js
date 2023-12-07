@@ -50,12 +50,16 @@ function UserRoutes(app) {
         res.json(currentUser);
     };
     app.post("/api/users/signup", signup);
-    
+
     const signin = async (req, res) => {
-        const {username, password} = req.body;
-        const currentUser = await dao.findUserByCredentials(username, password);
-        req.session["currentUser"] = currentUser;
-        res.json(currentUser);
+        const { username, password } = req.body;
+        try {
+            const currentUser = await dao.findUserByCredentials(username, password);
+            req.session["currentUser"] = currentUser;
+            res.json(currentUser);
+        } catch (error) {
+            res.status(401).json({ message: "Invalid username or password" });
+        }
     };
     app.post("/api/users/signin", signin);
 
