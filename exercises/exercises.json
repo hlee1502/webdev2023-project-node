@@ -1,0 +1,42 @@
+[
+    {
+        "name": "External Rotation with Band",
+        "type": "strength",
+        "muscle": "rotator cuff",
+        "equipment": "resistance band",
+        "difficulty": "beginner",
+        "instructions": "Stand with your right side next to a door or post, holding a resistance band in your left hand. Keep your elbow bent at a 90-degree angle and close to your side. Rotate your arm outward, pulling the band away from the door, then slowly return to the starting position. Repeat for several reps, then switch sides."
+    },
+    {
+        "name": "Internal Rotation with Band",
+        "type": "strength",
+        "muscle": "rotator cuff",
+        "equipment": "resistance band",
+        "difficulty": "beginner",
+        "instructions": "Stand with your left side next to a door or post, holding a resistance band in your right hand. Keep your elbow at a 90-degree angle and close to your side. Rotate your arm inward towards your abdomen, pulling the band towards you, then slowly return to the starting position. Repeat for several reps, then switch sides."
+    },
+    {
+        "name": "Dumbbell Lateral Rotation",
+        "type": "strength",
+        "muscle": "rotator cuff",
+        "equipment": "dumbbell",
+        "difficulty": "intermediate",
+        "instructions": "Lie on your right side on a flat bench with a dumbbell in your left hand. Keep your left elbow close to your side and bent at 90 degrees. Rotate your arm at the shoulder, lifting the dumbbell upwards, then slowly lower it back down. Complete several reps before switching to the other side."
+    },
+    {
+        "name": "Standing Cable External Rotation",
+        "type": "strength",
+        "muscle": "rotator cuff",
+        "equipment": "cable machine",
+        "difficulty": "intermediate",
+        "instructions": "Stand perpendicular to a cable machine with the pulley set at elbow height. Grab the handle with the hand furthest from the machine, keeping your elbow bent and close to your side. Rotate your arm away from the machine, then slowly return to the start. Complete multiple reps before switching arms."
+    },
+    {
+        "name": "Prone Horizontal Abduction",
+        "type": "strength",
+        "muscle": "rotator cuff",
+        "equipment": "dumbbell",
+        "difficulty": "intermediate",
+        "instructions": "Lie prone (face down) on a flat bench, with a dumbbell in each hand. Extend your arms out to the sides, keeping them slightly bent. Lift the weights upward in a horizontal motion, squeezing your shoulder blades together, then slowly lower them back down. Perform several repetitions."
+    }
+]

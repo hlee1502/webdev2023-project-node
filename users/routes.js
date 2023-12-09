@@ -73,6 +73,7 @@ function UserRoutes(app) {
         res.json(req.session["currentUser"]);
     };
     app.post("/api/users/account", account);
+
 }
 
 export default UserRoutes;

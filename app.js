@@ -4,6 +4,7 @@ import "dotenv/config";
 import session from "express-session";
 import mongoose from "mongoose";
 import UserRoutes from "./users/routes.js";
+import ExerciseRoutes from "./exercises/routes.js";
 
 //const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/project';
 const CONNECTION_STRING = 'mongodb://127.0.0.1:27017/project';
@@ -18,4 +19,5 @@ if (process.env.NODE_ENV !== "development") {
 app.use(session(sessionOptions));
 app.use(express.json());
 UserRoutes(app);
+ExerciseRoutes(app);
 app.listen(process.env.PORT || 4000); 
