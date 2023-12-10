@@ -74,6 +74,30 @@ function UserRoutes(app) {
     };
     app.post("/api/users/account", account);
 
+
+
+    app.post("/api/users/:userId/like", async (req, res) => {
+        try {
+            const { userId } = req.params;
+            const { exerciseId } = req.body;
+            const updatedUser = await dao.addLikedExercise(userId, exerciseId);
+            res.json(updatedUser);
+        } catch (error) {
+            res.status(400).json({ message: "Could not add liked exercise", error: error.message });
+        }
+    });
+
+    app.post("/api/users/:userId/unlike", async (req, res) => {
+        try {
+            const { userId } = req.params;
+            const { exerciseId } = req.body;
+            const updatedUser = await dao.removeLikedExercise(userId, exerciseId);
+            res.json(updatedUser);
+        } catch (error) {
+            res.status(400).json({ message: "Could not remove liked exercise", error: error.message });
+        }
+    });
+
 }
 
 export default UserRoutes;

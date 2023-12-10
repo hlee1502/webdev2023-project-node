@@ -15,3 +15,18 @@ export const updateUser = (userId, user) => userModel.updateOne({ _id: userId },
 
 export const deleteUser = (userId) => userModel.deleteOne({ _id: userId });
 
+export const addLikedExercise = async (userId, exerciseId) => {
+    return userModel.findByIdAndUpdate(
+        userId,
+        { $addToSet: { likedExercises: exerciseId } }, // $addToSet ensures no duplicates
+        { new: true }
+    );
+};
+
+export const removeLikedExercise = async (userId, exerciseId) => {
+    return userModel.findByIdAndUpdate(
+        userId,
+        { $pull: { likedExercises: exerciseId } }, // $pull removes the item from the array
+        { new: true }
+    );
+};
